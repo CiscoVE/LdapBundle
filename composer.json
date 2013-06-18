@@ -1,18 +1,18 @@
 {
-    "name": "writtengames/ldap-bundle",
+    "name": "cisco-systems/ldap-bundle",
     "type": "symfony-bundle",
-    "description": "Symfony WGLdapBundle",
+    "description": "Symfony 2 Bundle for LDAP access",
     "keywords": ["LDAP"],
     "license": "MIT",
     "authors": [
         {
             "name": "Moritz Kraft",
-            "email": "mo@writtengames.com",
-            "homepage": "www.writtengames.com"
+            "email": "mokraft@cisco.com",
+            "homepage": "www.cisco.com"
         }
     ],
     "autoload": {
-        "psr-0": { "WG\\LdapBundle": "" }
+        "psr-0": { "CiscoSystems\\LdapBundle": "" }
     },
-    "target-dir": "WG/LdapBundle"
+    "target-dir": "CiscoSystems/LdapBundle"
 }
