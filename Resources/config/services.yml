@@ -1,11 +1,11 @@
 parameters:
-    wg.ldap.client.class: WG\LdapBundle\Ldap\Client
-    wg.ldap.directories: ~
-    wg.ldap.default_directory: ~
+    cisco.ldap.client.class: CiscoSystems\LdapBundle\Ldap\Client
+    cisco.ldap.directories: ~
+    cisco.ldap.default_directory: ~
 
 services:
-    wg.ldap:
-        class: %wg.ldap.client.class%
+    cisco.ldap:
+        class: %cisco.ldap.client.class%
         arguments:
-            - %wg.ldap.directories%
-            - %wg.ldap.default_directory%
+            - %cisco.ldap.directories%
+            - %cisco.ldap.default_directory%

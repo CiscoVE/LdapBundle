@@ -1,13 +1,13 @@
 <?php
 
-namespace WG\LdapBundle\DependencyInjection;
+namespace CiscoSystems\LdapBundle\DependencyInjection;
 
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\Config\FileLocator;
 use Symfony\Component\HttpKernel\DependencyInjection\Extension;
 use Symfony\Component\DependencyInjection\Loader;
 
-class WGLdapExtension extends Extension
+class CiscoSystemsLdapExtension extends Extension
 {
     public function load( array $configs, ContainerBuilder $container )
     {
@@ -19,20 +19,16 @@ class WGLdapExtension extends Extension
         $loader = new Loader\YamlFileLoader( $container, $fileLocator );
         $loader->load( 'services.yml' );
         // Set parameters
-//        echo '<pre>';
-//        print_r( $config );
-//        echo '</pre>';
-//        die();
         $defDir = $config['default_directory'];
         if ( !isset( $config['directories'][$defDir] ) )
         {
-            throw new \InvalidArgumentException( 'WGLdapBundle says "Configured default directory is not defined."' );
+            throw new \InvalidArgumentException( 'CiscoSystemsLdapBundle says "Configured default directory is not defined."' );
         }
         if ( count( $config['directories'][$defDir]['servers'] ) < 1 )
         {
-            throw new \InvalidArgumentException( 'WGLdapBundle says "At least one directory server must be defined."' );
+            throw new \InvalidArgumentException( 'CiscoSystemsLdapBundle says "At least one directory server must be defined."' );
         }
-        $container->setParameter( 'wg.ldap.default_directory', $config['default_directory'] );
-        $container->setParameter( 'wg.ldap.directories', $config['directories'] );
+        $container->setParameter( 'cisco.ldap.default_directory', $config['default_directory'] );
+        $container->setParameter( 'cisco.ldap.directories', $config['directories'] );
     }
 }

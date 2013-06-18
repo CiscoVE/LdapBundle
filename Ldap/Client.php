@@ -1,6 +1,6 @@
 <?php
 
-namespace WG\LdapBundle\Ldap;
+namespace CiscoSystems\LdapBundle\Ldap;
 
 class Client
 {
@@ -27,7 +27,7 @@ class Client
         {
             if ( !isset( $this->directories[$directoryName] ) )
             {
-                throw new \InvalidArgumentException( 'WGLdapBundle says "Directory \'' . $directoryName . '\' is not defined."' );
+                throw new \InvalidArgumentException( 'CiscoSystemsLdapBundle says "Directory \'' . $directoryName . '\' is not defined."' );
             }
             $this->directory = $this->directories[$directoryName];
         }

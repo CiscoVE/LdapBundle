@@ -18,7 +18,7 @@ servers. If you name your directory `default`, like in this example, you can
 omit the `default_directory` option (because `default` is its default value).
 
 ```
-wg_ldap:
+cisco_ldap:
     default_directory: default
     directories:
         default:
@@ -33,7 +33,7 @@ wg_ldap:
 
 ```
 // Get service
-$ldap = $container->get( 'wg.ldap' );
+$ldap = $container->get( 'cisco.ldap' );
 
 // Connect to default directory and perform an anonymous bind
 $ldap->connect()->bind();
